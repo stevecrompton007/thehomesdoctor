@@ -2,6 +2,21 @@
 
 Modern replacement for the Base44-hosted site. **No monthly Base44 fee** — Netlify free tier covers typical brochure-site traffic.
 
+## Live previews
+
+| Preview | URL | Notes |
+|---------|-----|--------|
+| **GitHub Pages** | https://stevecrompton007.github.io/thehomesdoctor/ | Public, browse now |
+| **Netlify (drop)** | https://ubiquitous-bubblegum-e8fe9e.netlify.app/ | Password: `My-Drop-Site` until claimed |
+| **Repo** | https://github.com/stevecrompton007/thehomesdoctor | Source code |
+
+### Connect Netlify to your account (recommended)
+
+1. Open **[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/stevecrompton007/thehomesdoctor)** and sign in.
+2. Confirm repo `stevecrompton007/thehomesdoctor`, branch `main`, publish directory `.` (root).
+3. Deploy — you get a `*.netlify.app` URL with **forms** and no drop password.
+4. Add custom domain `thehomesdoctor.com` under **Domain management**.
+
 ## What's included
 
 - All main pages from thehomesdoctor.com (home, about, services, contact, quote, estate agents, service detail pages)
