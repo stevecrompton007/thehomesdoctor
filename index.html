@@ -11,13 +11,15 @@
   <meta property="og:url" content="https://thehomesdoctor.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://thehomesdoctor.com/images/logo.png">
-  <link rel="icon" href="/images/logo.png" type="image/png">
+  <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-  <script defer src="/js/layout.js"></script>
-  <script defer src="/js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="js/site-base.js"></script>
+  <link rel="stylesheet" href="" id="site-css">
+  <script>document.getElementById('site-css').href = (window.SITE_BASE || '') + '/css/styles.css';</script>
+  <script defer src="js/layout.js"></script>
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <div data-site-header></div>
@@ -28,15 +30,28 @@
       <div class="container hero-content">
         <p class="eyebrow">The Home's Doctor</p>
         <h1>Expert property advice for discerning homeowners</h1>
-        <p>Make confident decisions about your home's future — selling, downsizing, or improving — with guidance that pays for itself.</p>
-        <a href="/contact/" class="btn btn-gold">Book a Consultation</a>
+        <p class="hero-lead">Make confident decisions about your home's future — selling, downsizing, or improving — with guidance that pays for itself.</p>
+        <div class="hero-actions">
+          <a href="contact/" class="btn btn-gold">Book a Consultation</a>
+          <a href="services/" class="btn btn-ghost">Explore services</a>
+        </div>
       </div>
     </section>
 
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Value guarantee</strong><span>Uplift exceeds our fee</span></div>
+        <div class="trust-item"><strong>South East</strong><span>On-site consultations</span></div>
+        <div class="trust-item"><strong>Independent</strong><span>No builder or agent agenda</span></div>
+        <div class="trust-item"><strong>Free first call</strong><span>No obligation</span></div>
+      </div>
+    </div>
+
     <section class="section">
       <div class="container section-header">
+        <span class="section-label">Our approach</span>
         <h2>Property advice that pays for itself</h2>
-        <p>We help you spend the right money, in the right places, to get the best possible outcome from your home — whether selling, downsizing, or improving.</p>
+        <p>We help you spend the right money, in the right places, to get the best possible outcome from your home.</p>
       </div>
       <div class="container">
         <div class="quote-block">
@@ -48,30 +63,39 @@
 
     <section class="section section-alt">
       <div class="container section-header">
+        <span class="section-label">Services</span>
         <h2>How we can help</h2>
-        <p>Whether you're selling, downsizing, or improving — we provide clear, honest guidance tailored to your situation.</p>
+        <p>Clear, honest guidance tailored to your situation — whether you're selling, downsizing, or improving.</p>
       </div>
       <div class="container card-grid">
-        <a href="/selling-your-home/" class="service-card">
-          <div class="icon" aria-hidden="true">🏠</div>
+        <a href="selling-your-home/" class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V10.5z"/></svg>
+          </div>
           <h3>Selling Your Home</h3>
           <p>Get your house ready for buyers who will pay more — without overspending on the wrong things.</p>
           <span class="link-text">Learn more →</span>
         </a>
-        <a href="/downsizing/" class="service-card">
-          <div class="icon" aria-hidden="true">🤝</div>
+        <a href="downsizing/" class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg>
+          </div>
           <h3>Downsizing &amp; Bereavement</h3>
           <p>Sensitive, practical support during life's most difficult transitions.</p>
           <span class="link-text">Learn more →</span>
         </a>
-        <a href="/home-improvement/" class="service-card">
-          <div class="icon" aria-hidden="true">✨</div>
+        <a href="home-improvement/" class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6L5.7 21l2.3-7-6-4.6h7.6L12 2z"/></svg>
+          </div>
           <h3>Home Improvement</h3>
           <p>Improve your home with confidence — and without wasting money.</p>
           <span class="link-text">Learn more →</span>
         </a>
-        <a href="/renovation-guidance/" class="service-card">
-          <div class="icon" aria-hidden="true">📐</div>
+        <a href="renovation-guidance/" class="service-card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20V4h6l2 3h8v13H4zm8-10v2h6v-2h-6z"/></svg>
+          </div>
           <h3>Renovation Guidance</h3>
           <p>Expert project planning so you avoid costly mistakes before they happen.</p>
           <span class="link-text">Learn more →</span>
@@ -82,22 +106,23 @@
     <section class="section">
       <div class="container split">
         <div>
-          <p class="eyebrow">About The Home's Doctor</p>
+          <span class="section-label">About us</span>
           <h2>We've been through this ourselves</h2>
           <p>We're not builders. We're not estate agents. We're not designers pushing trends.</p>
-          <p>We're experienced property problem-solvers who have bought, renovated, sold, and lived through it all — multiple times. We understand both the emotional and financial sides of property decisions.</p>
-          <p>Now we help others avoid the expensive mistakes and make smart, human decisions about their homes.</p>
-          <a href="/about/" class="btn btn-primary">Read Our Story</a>
+          <p>We're experienced property problem-solvers who have bought, renovated, sold, and lived through it all — multiple times.</p>
+          <p>Now we help others avoid expensive mistakes and make smart, human decisions about their homes.</p>
+          <a href="about/" class="btn btn-primary">Read our story</a>
         </div>
         <img class="split-image" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdbc?auto=format&fit=crop&w=900&q=80" alt="Beautiful British home exterior" width="900" height="675" loading="lazy">
       </div>
     </section>
 
     <section class="section section-sage">
-      <div class="container" style="text-align:center;max-width:640px;margin:0 auto">
+      <div class="container centered-cta">
+        <span class="section-label" style="color:var(--gold-light)">Estate agents</span>
         <h2>Are you an estate agent?</h2>
         <p>We help your vendors prepare homes for faster sales and higher offers.</p>
-        <a href="/estate-agents/" class="btn btn-gold">Partner With Us</a>
+        <a href="estate-agents/" class="btn btn-gold">Partner with us</a>
       </div>
     </section>
 
@@ -105,8 +130,8 @@
       <div class="container">
         <div class="cta-band">
           <h2>Let's talk about your home</h2>
-          <p>Every property is different. Every situation is unique. Book a conversation and we'll work out the right approach for you.</p>
-          <a href="/contact/" class="btn btn-gold">Book a Consultation</a>
+          <p>Every property is different. Book a free conversation and we'll work out the right approach for you.</p>
+          <a href="contact/" class="btn btn-gold">Book a Consultation</a>
         </div>
       </div>
     </section>
@@ -114,7 +139,6 @@
 
   <div data-site-footer></div>
 
-  <!-- Netlify form detection -->
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input name="name" type="text">
     <input name="email" type="email">
