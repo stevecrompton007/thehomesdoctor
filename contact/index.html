@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | The Home's Doctor</title>
+  <meta name="description" content="Book a free, no-obligation conversation about your property. Phone, email, or send us a message.">
+  <link rel="canonical" href="https://thehomesdoctor.com/contact/">
+  <link rel="icon" href="/images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script defer src="/js/layout.js"></script>
+  <script defer src="/js/main.js"></script>
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Let's talk about your home</h1>
+        <p>No obligation, no pressure. Just a friendly conversation to understand your situation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2>Contact us</h2>
+          <div class="contact-block">
+            <h3>Phone</h3>
+            <p><a href="tel:07903679900">07903 679900</a></p>
+            <p style="color:var(--ink-muted);font-size:0.9375rem">Mon–Fri, 9am–6pm</p>
+          </div>
+          <div class="contact-block">
+            <h3>Email</h3>
+            <p><a href="mailto:info@thehomesdoctor.com">info@thehomesdoctor.com</a></p>
+            <p style="color:var(--ink-muted);font-size:0.9375rem">We'll respond within 24 hours</p>
+          </div>
+          <div class="contact-block">
+            <h3>Location</h3>
+            <p>South East England</p>
+            <p style="color:var(--ink-muted);font-size:0.9375rem">Happy to travel for consultations</p>
+          </div>
+          <h3>What happens next?</h3>
+          <ul class="steps-list">
+            <li>Response within 24 hours</li>
+            <li>Brief conversation about your needs</li>
+            <li>Arrange consultation if suitable</li>
+            <li>No obligation at any stage</li>
+          </ul>
+        </div>
+
+        <div class="form-panel">
+          <div class="form-success" role="status">Thank you — we've received your message and will be in touch shortly.</div>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/?success=1">
+            <input type="hidden" name="form-name" value="contact">
+            <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Your name *</label>
+                <input id="name" name="name" type="text" required placeholder="John Smith" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address *</label>
+                <input id="email" name="email" type="email" required placeholder="john@example.com" autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="07XXX XXXXXX" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="enquiry">Type of enquiry *</label>
+                <select id="enquiry" name="enquiry" required>
+                  <option value="">Please select</option>
+                  <option>Selling my home</option>
+                  <option>Downsizing / bereavement</option>
+                  <option>Home improvement</option>
+                  <option>Renovation guidance</option>
+                  <option>Estate agent partnership</option>
+                  <option>General question</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="message">Tell us about your situation *</label>
+                <textarea id="message" name="message" required placeholder="Briefly describe your property and what you're trying to achieve…"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-note">* Required fields. Your information will be kept confidential.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container section-header">
+        <h2>Common questions</h2>
+      </div>
+      <div class="container faq-grid" style="max-width:720px;margin:0 auto">
+        <div class="faq-item">
+          <h3>Is the initial conversation free?</h3>
+          <p>Yes. The first conversation is always free with no obligation either way.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How quickly can we get started?</h3>
+          <p>Usually within a few days. We can typically arrange an on-site visit within the week.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I'm not sure what I need?</h3>
+          <p>That's normal. The initial conversation helps us work out what makes sense for you.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+</body>
+</html>

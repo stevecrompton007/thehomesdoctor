@@ -1,0 +1,74 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/About"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/Services"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/Contact"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/GetQuote"
+  to = "/get-quote/"
+  status = 301
+
+[[redirects]]
+  from = "/HowItWorks"
+  to = "/how-it-works/"
+  status = 301
+
+[[redirects]]
+  from = "/SellingYourHome"
+  to = "/selling-your-home/"
+  status = 301
+
+[[redirects]]
+  from = "/Downsizing"
+  to = "/downsizing/"
+  status = 301
+
+[[redirects]]
+  from = "/HomeImprovement"
+  to = "/home-improvement/"
+  status = 301
+
+[[redirects]]
+  from = "/RenovationGuidance"
+  to = "/renovation-guidance/"
+  status = 301
+
+[[redirects]]
+  from = "/ForEstateAgents"
+  to = "/estate-agents/"
+  status = 301
+
+[[redirects]]
+  from = "/CaseStudies"
+  to = "/case-studies/"
+  status = 301
+
+[[redirects]]
+  from = "/Blog"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/Home"
+  to = "/"
+  status = 301

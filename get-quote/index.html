@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get a Quote | The Home's Doctor</title>
+  <meta name="description" content="Request a tailored quote for property advice — selling, downsizing, improvement or renovation guidance.">
+  <link rel="canonical" href="https://thehomesdoctor.com/get-quote/">
+  <link rel="icon" href="/images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script defer src="/js/layout.js"></script>
+  <script defer src="/js/main.js"></script>
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Get a quote</h1>
+        <p>Tell us about your property and goals. We'll come back with honest advice on scope, timeline, and fees — no obligation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:640px">
+        <div class="form-panel">
+          <div class="form-success" role="status">Thank you — we'll review your details and respond within one working day.</div>
+          <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/get-quote/?success=1">
+            <input type="hidden" name="form-name" value="quote">
+            <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
+            <div class="form-group">
+              <label for="name">Your name *</label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service required *</label>
+              <select id="service" name="service" required>
+                <option value="">Please select</option>
+                <option>Selling your home</option>
+                <option>Downsizing / bereavement</option>
+                <option>Home improvement</option>
+                <option>Renovation guidance</option>
+                <option>Property health check</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="postcode">Property postcode</label>
+              <input id="postcode" name="postcode" type="text" autocomplete="postal-code">
+            </div>
+            <div class="form-group">
+              <label for="budget">Approximate budget (optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Prefer not to say</option>
+                <option>Under £5,000</option>
+                <option>£5,000 – £15,000</option>
+                <option>£15,000 – £50,000</option>
+                <option>Over £50,000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="details">Project details *</label>
+              <textarea id="details" name="details" required placeholder="What are you hoping to achieve, and by when?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Request quote</button>
+            <p class="form-note">We guarantee value uplift that exceeds our fee where we take on a project — or we'll tell you honestly if we can't help.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+</body>
+</html>
