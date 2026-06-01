@@ -1121,21 +1121,18 @@ p {
 
 .case-study .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
-  align-items: start;
 }
 
 .case-study .gallery img {
   width: 100%;
-  height: auto;
-  max-width: 100%;
-  aspect-ratio: unset;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   object-position: center;
   display: block;
-  background: var(--paper);
+  background: var(--cream);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(21, 34, 31, 0.08);
@@ -1146,7 +1143,6 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-bottom: 2rem;
-  align-items: start;
 }
 
 .case-study .gallery-pair figure {
@@ -1164,11 +1160,14 @@ p {
 
 .case-study .gallery-pair img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: var(--cream);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(21, 34, 31, 0.08);
-  background: var(--paper);
 }
 
 .case-study .gallery-single {
@@ -1179,8 +1178,14 @@ p {
 
 .case-study .gallery-single img {
   width: 100%;
-  max-width: 900px;
-  height: auto;
+  max-width: 720px;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center;
+  background: var(--cream);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(21, 34, 31, 0.08);
 }
 
 .case-study .gallery-caption {
@@ -1189,6 +1194,12 @@ p {
   color: var(--ink-soft);
   margin: -1rem 0 2rem;
   font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .case-study .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
