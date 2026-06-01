@@ -1141,9 +1141,44 @@ p {
   border: 1px solid rgba(21, 34, 31, 0.06);
 }
 
+/* Landscape story images — show full frame, no crop */
+.gallery-single {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 .gallery-single img {
-  aspect-ratio: 16/10;
-  max-height: 420px;
+  width: 100%;
+  max-width: 880px;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  max-height: none;
+}
+
+/* Portrait before/after composites (e.g. Victorian terrace) */
+.gallery-portrait {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.gallery-portrait img {
+  width: 100%;
+  max-width: min(100%, 420px);
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  max-height: none;
+}
+
+.gallery-caption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  margin: 0 0 2rem;
+  font-style: italic;
 }
 
 .case-block h3 {
